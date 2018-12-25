@@ -22,11 +22,12 @@ class Index extends Controller
         
 		//return Pay::name('wxpay')->transfer('100');	
 	
-		//Crypts::encrypt(123456);
+		echo Crypts::encrypt(123456);
 	
 		$str =  Hash::make(123);
 		
 		if(Hash::check(1235,$str)){
+			
 			return 'success';
 		}else{
 			return 'error';
