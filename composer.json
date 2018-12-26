@@ -3,7 +3,7 @@
     "description": "这是小李子的",
     "type": "project",
     "keywords": [
-        "framework",
+        "framework"
     ],
     "homepage": "http://thinkphp.cn/",
     "license": "Apache-2.0",
