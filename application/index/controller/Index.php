@@ -11,9 +11,9 @@ class Index extends Controller
 	
 	protected $repository;
 	
-	public function __construct()
+	public function __construct(User $user)
 	{
-		//$this->repository = new UserRepository(User);
+		$this->repository = new UserRepository($user);
 	}
 	
 
