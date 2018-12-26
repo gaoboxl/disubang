@@ -5,6 +5,7 @@ use think\Controller;
 use app\common\model\User;
 use app\index\repository\UserRepository;
 use drive\facade\{Crypts,Hash};
+use drive\Pay;
 
 class Index extends Controller
 {
@@ -19,22 +20,24 @@ class Index extends Controller
 
     public function index()
     {
-        
-		//return Pay::name('wxpay')->transfer('100');	
-	
+		echo  Pay::name('alipay')->transfer('100');	
+		
+		echo "</br>";
+		
 		echo Crypts::encrypt(123456);
+		
+		echo "</br>";
 	
 		$str =  Hash::make(123);
 		
-		if(Hash::check(1235,$str)){
+		if(Hash::check(123,$str)){
 			
 			return 'success';
+			
 		}else{
+			
 			return 'error';
-		}
-		
-	
-		
+		}	
 	}
 	
 	
